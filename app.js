@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-  let info = JSON.stringify(req.headers["user-agent"]);
+  let info = req.headers["user-agent"];
   res.send(info);
 });
 
